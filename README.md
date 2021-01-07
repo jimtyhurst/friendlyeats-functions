@@ -12,9 +12,9 @@
 
 This project contains experiments and simple, sample code for implementing Google [Cloud Functions](https://cloud.google.com/functions/) associated with a [Firebase](https://firebase.google.com/) application that access data from a [Firestore repository](https://cloud.google.com/firestore/docs/).
 
-[FriendlyEats](https://github.com/firebase/friendlyeats-web) is a restaurant recommendation app built on [Cloud Firestore](https://cloud.google.com/firestore/). While working through the tutorial, I [modified](https://github.com/jimtyhurst/friendlyeats-web) the application slightly to calculate a `valueIndex` for each restaurant. See the [valueIndex branch](https://github.com/jimtyhurst/friendlyeats-web/tree/valueIndex) of that application.
+[FriendlyEats](https://github.com/firebase/friendlyeats-web) is a restaurant recommendation app built on [Cloud Firestore](https://cloud.google.com/firestore/). While working through the tutorial, I [modified](https://github.com/jimtyhurst/friendlyeats-web) the application slightly to calculate a `valueIndex` for each restaurant. See the [valueIndex branch](https://github.com/jimtyhurst/friendlyeats-web/tree/valueIndex) of [my fork](https://github.com/jimtyhurst/friendlyeats-web) of [that application](https://github.com/firebase/friendlyeats-web).
 
-In this "functions" repository, I have been experimenting with Cloud Functions to learn how to create serverless functions in [TypeScript](https://www.typescriptlang.org/), using the [Firebase](https://firebase.google.com/docs) libraries. I am familiar with writing web services in Java, so this repository contains my experiments to learn how to do this within the Firebase environment, using JavaScript/TypeScript.
+In this "functions" repository, I have been experimenting with Cloud Functions to learn how to create serverless functions in [TypeScript](https://www.typescriptlang.org/), using the [Firebase](https://firebase.google.com/docs) libraries. I am familiar with writing web services in Java, so this repository contains my experiments to learn how to create web services within the Firebase environment, using JavaScript/TypeScript.
 
 * Respond to an HTTPS request.
 * Read query parameters from an HTTPS request.
@@ -30,7 +30,9 @@ cd friendlyeats-functions/functions
 yarn install
 ```
 
-### Steps I followed to create the project:
+### Steps I followed to create this project:
+You do _not_ need to follow these steps, because the project has already been created and initialized in the steps above. I am just including this as documentation for the steps that I followed to create a new project.
+
 Create project:
 ```bash
 cd ~/src/js/Firebase-samples/
@@ -69,21 +71,21 @@ Experiment with scripts:
 ```bash
 yarn lint
 yarn build
-yarn serve
-# then navigate to: http://localhost:5001/com-tyhurst-friendlyeats/us-central1/helloWorld
+yarn serve  # to start the Firebase Functions Emulator
+# then navigate to: http://localhost:5001/<your-project-name>/us-central1/helloWorld
 ```
 
 Deploy the function:
 ```bash
 yarn deploy
 # which is: firebase deploy --only functions
-# then navigate to: https://us-central1-com-tyhurst-friendlyeats.cloudfunctions.net/helloWorld
+# then navigate to: https://us-central1-<your-project-name>.cloudfunctions.net/helloWorld
 ```
 
-Note: I have since replaced the `helloWorld` function with my `helloFriend` function.
+Note: I have since replaced default the `helloWorld` function with my `helloFriend` function.
 
 
 ## License
-Copyright (c) 2020 [Jim Tyhurst](https://www.jimtyhurst.com)
+Copyright (c) 2020 [Jim Tyhurst](https://www.jimtyhurst.com).
 
 Licensed under the [Open Software License version 3.0](./LICENSE).
